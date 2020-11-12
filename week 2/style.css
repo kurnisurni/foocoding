@@ -12,109 +12,105 @@ h1 {
   text-align: center;
 }
 
-@media only screen and (min-width:768px) {
-h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  text-align: center;
-}
-}
-
 h2 {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
 }
 
-@media only screen and (min-width:768px) {
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+  }
 }
 
-ul {
+/*grid-float for small media */
+
+#grid-floats {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
-  /*padding: 5px;*/
 }
 
-  @media only screen and (min-width:768px) {
-    ul {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
-    }
-  }
+#grid-floats > li.grid-item {
+  border: 5px solid slategray;
+  list-style: none;
+  padding: 2px;
+}
 
-  @media only screen and (min-width:992px) {
-    ul {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10 px;
-    }
-  }
+#grid-floats > li.grid-item > h3 {
+  text-align: center;
+  font-size: 1.6rem;
+}
 
-
-img {
-  width: 100px;
-  height: 100px;
+#grid-floats > li.grid-item > img {
+  width: 200px;
+  height: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
-  
-  @media only screen and (min-width:768px) {
-    img {
+
+#grid-floats > li.grid-item > p {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: auto;
+  padding: 0 10px;
+}
+
+#grid-floats > li:nth-child(1) {
+  grid-column: span 2;
+}
+
+/* grid floats for tablet */
+@media only screen and (min-width: 768px) {
+  #grid-floats {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+  }
+
+  #grid-floats > li.grid-item {
+    grid-column: span 4;
+  }
+
+  #grid-floats > li:nth-child(-n + 2) {
+    grid-column: span 6;
+  }
+
+  #grid-floats > li.grid-item > h3 {
+    font-size: 1.8rem;
+  }
+
+  #grid-floats > li.grid-item > img {
     width: 200px;
     height: 200px;
-    }
+  }
+}
+
+/* grid floats for desktop */
+
+@media only screen and (min-width: 1024px) {
+  #grid-floats {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  li {
-    border: 5px solid slategray;
-    list-style: none;
-    padding: 2px;
+  #grid-floats > li.grid-item {
+    grid-column: auto;
   }
 
-  li:nth-child(1) {
-    grid-column: span 2;
-  }
-
-  @media only screen and (min-width:768px) {
-    li:nth-child(-n+2) {
-      grid-column: span 2;
-    }
-  }
-
-  @media only screen and (min-width:992px) {
-  li:nth-child(1) {
+  #grid-floats > li:nth-child(1) {
     grid-column: span 2;
   }
 }
 
-  h3 {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  @media only screen and (min-width:768px) {
-    h3 {
-      font-size: 1.75rem;
-      text-align: center;
-    }
-  }
-
-  p {
-    font-size: 0.7rem;
-    text-align: center;
-    margin-top: auto;
-  }
-
-  @media only screen and (min-width:768px) {
-    p {
-  font-size: 1rem;
-    text-align: center;
-    margin-top: auto;
-    }
-  }
+/* grid flex */
