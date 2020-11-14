@@ -3,13 +3,29 @@
 }
 
 body {
-  max-width: 100%;
+  width: 100%;
 }
 
 h1 {
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
+  background: red;
+  position: relative;
+  animation: animateTitle 5s infinite;
+}
+
+@keyframes animateTitle {
+  0% {
+    left: 0;
+    background: red;
+    width: 100px;
+  }
+  100% {
+    left: 35%;
+    background: yellow;
+    width: 300px;
+  }
 }
 
 h2 {
@@ -74,7 +90,6 @@ h2 {
 /* grid floats for tablet */
 @media only screen and (min-width: 768px) {
   #grid-floats {
-    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(12, 1fr);
     gap: 8px;
   }
@@ -113,4 +128,54 @@ h2 {
   }
 }
 
-/* grid flex */
+/*Grid flex */
+
+#grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 8px;
+  padding: 5px;
+}
+#grid-flex p {
+  font-size: 1em;
+}
+#grid-flex img {
+  width: 70%;
+  height: auto;
+  margin: 2rem;
+}
+#grid-flex li {
+  width: 16%;
+  height: auto;
+  margin: 1%;
+  padding: 1%;
+}
+#grid-flex :first-child {
+  width: 30%;
+}
+@media screen and (max-width: 320px) {
+  #grid-flex li {
+    width: 40%;
+  }
+  #grid-flex :first-child {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  #grid-flex li {
+    width: 30%;
+  }
+  #grid-flex :first-child {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 1224px) {
+  #grid-flex li {
+    width: 20%;
+  }
+  #grid-flex :first-child {
+    width: 30%;
+  }
+}
