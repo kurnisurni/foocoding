@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The world’s only Moomin Museum</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script type="text/JavaScript">
+
+            <!--
+            var picCount=0; // global
+            var picArray= ["assets/groke.png","assets/moomintroll.png","assets/Muminpappan.png"]
+
+            function nextPic()
+            { // check if adding 1 exceeds number of pics in array
+            picCount=(picCount+1<picArray.length)? picCount+1 : 0;
+            var build='<img border="0" src="'+picArray[picCount]+'" width="205" height="100">\
+            ';
+            document.getElementById("imgHolder").innerHTML=build;
+            setTimeout('nextPic()',500)
+            }
+        </script>
+</head>
+<body>
+
+<div class="flex-container">
+<!-- Header-->
+  <header class="header">
+      <div class="logomuumimuse"><a href="#home">
+        <img src="assets/moomintroll.png" alt=""></a></div>
+      <div class="onlymoomin"><h1>The world’s only Moomin Museum</h1>
+          <h2>in Tampere, Finland!</h2></div>  
+      <div class="hfoto"><a href="#home">
+          <img src="assets/moomin-family.png" alt=""></a>
+      </div>  
+  </header>
+<!--  Sidebar -->
+<aside class="aside1"><h2>Exhibitions</h2>
+    <div class="row2">
+    <div id="mainnavigation" class="navigation-tampere-talo pull-left">
+        
+        <ul id="menu-mainnavigation-1" class="menu">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-838">
+                    <a href="https://muumimuseo.fi/en/exhibitions/what-happens-next/">What Happens Next?
+                    </a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-839">
+                    <a href="https://muumimuseo.fi/en/exhibitions/tove-jansson-and-the-moomins/">Observatory</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840">
+                    <a href="https://muumimuseo.fi/en/exhibitions/the-moomin-museum-reading-room/">The Moomin Museum Reading Room</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-841"><a href="https://muumimuseo.fi/en/exhibitions/studio/">Studio</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-842"><a href="https://muumimuseo.fi/en/shop/">Shop</a></li>
+            </ul></li>
+                      
+      </div>
+      
+      <div class="mobilenavi-container">
+        <div class="btn-mobilenavi hamburger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </div>
+</aside>
+  <article class="main"onload="setTimeout('nextPic()',400)">
+
+        <div id="imgHolder">
+        <img src="assets/Muminpappan.png" width="440" height="440">
+        </div>
+        
+  </article>
+  <footer class="footer"><h2>Muuminmuseo</h2>
+    <div class="footermenubar">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-856">
+          <a href="https://muumimuseo.fi/en/contact-us/">Contact us</a>
+          <ul class="sub-menu">
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-857">
+                <a href="https://muumimuseo.fi/en/contact-us/museum-personnel/">Museum personnel</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-858">
+               <a href="https://muumimuseo.fi/en/contact-us/for-the-media/">For the media</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-859">
+                <a href="https://muumimuseo.fi/en/contact-us/links/">Links</a></li>
+          </ul>
+      </li>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
