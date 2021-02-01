@@ -56,7 +56,8 @@ header {
 /* About */
 .about {
     padding-top: 100px;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
+    margin-bottom: -130px;
 }
 
 .profile-img {
@@ -110,8 +111,40 @@ header {
     background: black !important;
 }
 
+/* Social media */
+.social-icons {
+    top: 50%;
+    transform: translateY(-50%);
+    position: sticky;
+    z-index: 1;
+    width: 80px;
+}
+
+.social-icons ul {
+    padding: initial;
+}
+
+.social-icons ul li {
+    height: 40px;
+    width: 40px;
+    list-style-type: none;
+    padding-left: 12px;
+    padding-top: 6px;
+    margin-top: 5px;
+    color: white;
+    background: black;
+}
+
+.social-icons ul li:hover {
+    padding-left: 30px;
+    width: 80px;
+    transition: 1s;
+}
+
+
 /* Resume */
 .resume {
+    margin-top: -50px;
     padding-top: 50px;
     padding-bottom: 30px;
     background: #f9f9f9;
@@ -138,7 +171,7 @@ header {
 }
 
 .timeline li {
-    margin-top: 20px auto 20px 20px;
+    margin: 20px auto 20px 20px;
     background: white;
 }
 
@@ -147,4 +180,72 @@ header {
     padding: 5px 0 5px 20px;
     color: white;
     font-size: 15px;
+}
+
+.timeline li h4 span {
+    font-weight: bold;
+    color: #ccc;
+}
+
+.timeline li:before {
+    content: '';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+/* Contact */
+.contact {
+    padding-top: 50px;
+    background: darkmagenta;
+}
+
+.contact .row {
+    padding: 30px 0;
+    font-size: 22px;
+}
+
+.contact .col-md-4 .fa {
+    padding: 10px;
+    font-size: 40px;
+}
+
+.contact .btn {
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    border: 2px solid white;
+    background: transparent;
+}
+
+.contact .btn:focus {
+    box-shadow: none !important;
+}
+
+.contact .btn:hover {
+    border: 2px solid black !important;
+    background: black !important;
+    transition: 0.6s;
+}
+
+.contact .btn .fa {
+    margin-right: 10px;
+}
+
+footer {
+    background: black;
+    height: 50px;
+    margin-top: 50px;
+    color: white;
+    padding-top: 10px;
+}
+
+.fa-heart-o {
+    color: red;
 }
