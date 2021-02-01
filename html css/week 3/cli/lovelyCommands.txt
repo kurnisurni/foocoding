@@ -1,2 +1,2 @@
-"dog" 
-"hamster" 
+"dog"
+"hamster"

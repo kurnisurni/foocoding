@@ -5,7 +5,7 @@ body {
 
 .flex-container {
   display: -webkit-flex;
-  display: flex;  
+  display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   font-weight: bold;
@@ -28,7 +28,7 @@ body {
   padding-bottom:0;
   padding-right:0;}
 .footer {
-  background: #95a5a6; 
+  background: #95a5a6;
   padding-left:20;
   padding-top: 0;
   padding-bottom:0;
@@ -238,7 +238,7 @@ float:right;
 @media all and (min-width: 768px) {
   .aside { flex: 1; }
   .main    { flex: 3 0px; }
-  .aside1 { flex: 1; } 
+  .aside1 { flex: 1; }
   .main    { order: 2; }
   .footer  { order: 3; }
 }
