@@ -1,1 +1,42 @@
-/* add your styling here */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightpink;
+    color: rgb(14, 14, 168);
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 20px;
+}
+
+ul.book-array {
+    line-height: 1.6;
+}
+
+li.book-array-list {
+    list-style-type: decimal-leading-zero;
+}
+
+img {
+    width: 200px;
+    height: 270px;
+}
+
+li.book-info {
+    list-style: none;
+    text-align: center;
+}
+
+.cover-book__info {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F2F2F2;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 0px;
+    padding-left: 10px;
+    grid-gap: 0.5rem 1rem;
+}
+
+.cover-book__info>li.book-info {
+    flex-basis: 25%;
+}
