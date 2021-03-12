@@ -40,7 +40,8 @@ const tuesday = [{
     },
 ];
 
-const maartjesTasks = monday.concat(tuesday);
+// const maartjesTasks = monday.concat(tuesday);
+const maartjesTasks = [...monday, ...tuesday] //spread operation is way better than concat, it's more flexible with the urutan dan bisa tambahin
 const maartjesHourlyRate = 20;
 
 function computeEarnings(tasks, hourlyRate) {
@@ -57,9 +58,9 @@ function computeEarnings(tasks, hourlyRate) {
 const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);
 
 // add code to convert `earnings` to a string rounded to two decimals (euro cents)
-let roundEarnings = earnings.toFixed(2);
+const result = earnings.toFixed(2);
 
-console.log(`Maartje has earned €${roundEarnings}`);
+console.log(`Maartje has earned €${result}`);
 
 // Do not change or remove anything below this line
 module.exports = {
