@@ -17,11 +17,21 @@ const arr3d = [
 ];
 
 function flattenArray2d(arr) {
-    return arr.reduce((acc, val) => acc.concat(val), []);
+    // return arr.reduce((acc, val) => acc.concat(val), []);
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(...arr[i]);
+    }
 }
 
 function flattenArray3d(arr) {
-    return arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenArray3d(val)) : acc.concat(val), []);
+    // arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenArray3d(val)) : acc.concat(val), []);
+    const newArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(...arr[i]);
+    }
+    return flattenArray2d(newArr);
 }
 
 console.log(flattenArray2d(arr2d)); // -> [1, 2, 3, 4, 5, 6]
